@@ -13,3 +13,7 @@
 - Publishing, submitting, messaging, spending, trading, transfers, and appointments require approval for the specific action.
 - Public professional claims must be verified before use.
 
+## 2026-09-10 — Local skill availability
+
+- Make `home-base-operator` available from the user's local Codex skills directory while keeping its source in this repository.
+- The repository remains the canonical copy; future improvements should be committed here.

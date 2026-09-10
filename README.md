@@ -8,6 +8,7 @@ Private operating repository for reusable context, workflows, drafts, and decisi
 2. Read `CONTEXT.md` for durable, non-sensitive context.
 3. Open `PRIORITIES.md` for the current focus and next actions.
 4. Use `workstreams/` for project-specific status and artifacts.
+5. Read `HOW_TO_USE.md` when connecting a new ChatGPT or Codex task.
 
 ## Purpose
 
@@ -20,3 +21,8 @@ Private operating repository for reusable context, workflows, drafts, and decisi
 
 Never store passwords, access tokens, account numbers, private health records, tax identifiers, or browser-session data here. Treat financial figures, job listings, benefit rules, vehicle listings, and account status as time-sensitive and verify them before acting.
 
+## Repository status
+
+- GitHub visibility: private.
+- Reusable local skill: `home-base-operator`.
+- Canonical remote: `johnsbartholomew-star/john-clara-operations`.
