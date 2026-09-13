@@ -1,7 +1,7 @@
 # Consulting and Upwork
 
 
-Updated: 2026-09-12
+Updated: 2026-09-13
 ## Outcome
 
 Win the first paying consulting client using John's retail operations, staffing, training, and process-documentation experience.
@@ -23,3 +23,9 @@ Verify the New Store Opening Playbook listing in John's signed-in Upwork account
 - Drafted a tailored proposal and answers to the client's three application questions without claiming paid consulting or formal NSO playbook experience.
 - Source: https://www.upwork.com/freelance-jobs/apply/Retail-Operations-Consultant-Needed-for-New-Store-Opening-NSO-Playbook_~022088479887402573456/
 - Availability, Connects, and milestone terms remain unverified in the signed-in account. Nothing was submitted.
+
+## September 13 deliverable
+
+- Rechecked the public listing, which was crawled September 12 and continued to show the $1,000 Phase 1 pilot with 20–50 proposals and no interviews; signed-in availability remains unverified.
+- Created `NSO_PEOPLE_READINESS_SAMPLE_2026-09-13.md`, an original, non-confidential demonstration chapter aligned with the client's requested timeline, ownership, dependency, risk, escalation, and sample-chapter structure.
+- Nothing was published or submitted.
