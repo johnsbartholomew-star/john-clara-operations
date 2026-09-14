@@ -1,0 +1,33 @@
+# Pilot: Docker Compose >= 2.24.4 required for !override.
+services:
+  api:
+    image: ghcr.io/danny-avila/librechat:v0.8.7@sha256:c5db3331b845e1f289f8d04c0c77936c4bbe372f76730a804abc1c37e44d23a9
+    ports: !override
+      - "127.0.0.1:3080:3080"
+    depends_on: !override
+      - mongodb
+      - meilisearch
+    environment:
+      RAG_API_URL: ""
+    volumes:
+      - ./librechat.yaml:/app/librechat.yaml:ro
+    restart: unless-stopped
+  admin-panel:
+    image: ghcr.io/clickhouse/librechat-admin-panel@sha256:a395465d1daa3c11495810a8c224df86675985d50de42e98e36eeedbd8aecb94
+    ports: !override
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped
+  mongodb:
+    image: mongo:8.0.20@sha256:098862b1339f031900ca66cf8fef799e616d6324fa41b9a263f2ec899552c1ef
+    ports: !reset []
+    restart: unless-stopped
+  meilisearch:
+    image: getmeili/meilisearch:v1.35.1@sha256:8b57fc3c7f46535ddef3828df1538465ac19d892eb57c9a10da6df0880bd5856
+    ports: !reset []
+    restart: unless-stopped
+  rag_api:
+    profiles: [excluded-rag]
+    ports: !reset []
+  vectordb:
+    profiles: [excluded-rag]
+    ports: !reset []

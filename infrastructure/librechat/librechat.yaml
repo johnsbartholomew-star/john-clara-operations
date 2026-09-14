@@ -1,0 +1,38 @@
+version: 1.3.13
+cache: true
+interface:
+  customWelcome: "Local pilot — GitHub is the source of truth."
+  fileSearch: false
+  agents:
+    use: false
+    create: false
+    share: false
+    public: false
+  mcpServers:
+    use: false
+    create: false
+    share: false
+    public: false
+  remoteAgents:
+    use: false
+    create: false
+    share: false
+    public: false
+  marketplace:
+    use: false
+memory:
+  disabled: true
+  personalize: false
+skillSync:
+  github:
+    enabled: false
+    intervalMinutes: 60
+    runOnStartup: true
+    sources:
+      - id: john-operations
+        owner: johnsbartholomew-star
+        repo: john-clara-operations
+        ref: main
+        paths: [skills]
+        skillDiscoveryDepth: 1
+        token: '${GITHUB_SKILLS_TOKEN}'

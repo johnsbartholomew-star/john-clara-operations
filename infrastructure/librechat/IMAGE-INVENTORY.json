@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-09-14T17:14:26.713403+00:00",
+  "source_tag": "v0.8.7",
+  "source_commit": "9e74cc0e57b395926122bd4062c1fcedc48ed465",
+  "images": [
+    {
+      "service": "admin-panel",
+      "container": "/admin-panel",
+      "state": "created",
+      "reference": "ghcr.io/clickhouse/librechat-admin-panel@sha256:a395465d1daa3c11495810a8c224df86675985d50de42e98e36eeedbd8aecb94",
+      "image_id": "sha256:a395465d1daa3c11495810a8c224df86675985d50de42e98e36eeedbd8aecb94",
+      "repo_digests": [
+        "ghcr.io/clickhouse/librechat-admin-panel@sha256:a395465d1daa3c11495810a8c224df86675985d50de42e98e36eeedbd8aecb94"
+      ],
+      "platform_manifest": "sha256:d5975121207fc729ce5b74dec9083533d6ce4602fd118051a716425733aa621e",
+      "architecture": "arm64",
+      "ports": []
+    },
+    {
+      "service": "api",
+      "container": "/LibreChat",
+      "state": "created",
+      "reference": "ghcr.io/danny-avila/librechat:v0.8.7@sha256:c5db3331b845e1f289f8d04c0c77936c4bbe372f76730a804abc1c37e44d23a9",
+      "image_id": "sha256:c5db3331b845e1f289f8d04c0c77936c4bbe372f76730a804abc1c37e44d23a9",
+      "repo_digests": [
+        "ghcr.io/danny-avila/librechat@sha256:c5db3331b845e1f289f8d04c0c77936c4bbe372f76730a804abc1c37e44d23a9"
+      ],
+      "platform_manifest": "sha256:2f9aee2c87131b4dab5189f3cde0ca38fa0c2875f1609124aa1cad5e2a3d89c9",
+      "architecture": "arm64",
+      "ports": []
+    },
+    {
+      "service": "mongodb",
+      "container": "/chat-mongodb",
+      "state": "created",
+      "reference": "mongo:8.0.20@sha256:098862b1339f031900ca66cf8fef799e616d6324fa41b9a263f2ec899552c1ef",
+      "image_id": "sha256:098862b1339f031900ca66cf8fef799e616d6324fa41b9a263f2ec899552c1ef",
+      "repo_digests": [
+        "mongo@sha256:098862b1339f031900ca66cf8fef799e616d6324fa41b9a263f2ec899552c1ef"
+      ],
+      "platform_manifest": "sha256:51ea5d1d0b72b8a4fc11045abd4a88794a3a190e945631d6f09bb7d378f33c70",
+      "architecture": "arm64",
+      "ports": []
+    },
+    {
+      "service": "meilisearch",
+      "container": "/chat-meilisearch",
+      "state": "created",
+      "reference": "getmeili/meilisearch:v1.35.1@sha256:8b57fc3c7f46535ddef3828df1538465ac19d892eb57c9a10da6df0880bd5856",
+      "image_id": "sha256:8b57fc3c7f46535ddef3828df1538465ac19d892eb57c9a10da6df0880bd5856",
+      "repo_digests": [
+        "getmeili/meilisearch@sha256:8b57fc3c7f46535ddef3828df1538465ac19d892eb57c9a10da6df0880bd5856"
+      ],
+      "platform_manifest": "sha256:d6491dcad0494a321fed1932a133c1fd4eb2d1bb07067376e30b61c7fe0d62f9",
+      "architecture": "arm64",
+      "ports": []
+    }
+  ],
+  "networks": [
+    "none",
+    "bridge",
+    "host",
+    "librechat_default"
+  ],
+  "volumes": [
+    "20e41c060e65d75db488603a1d801317bbee890cbeb68fbd8e0cd06e59ee62f6"
+  ]
+}
