@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-09-14T17:14:26.713403+00:00",
+  "captured_at": "2026-09-14T23:01:04.235780+00:00",
   "source_tag": "v0.8.7",
   "source_commit": "9e74cc0e57b395926122bd4062c1fcedc48ed465",
   "images": [
@@ -45,7 +45,7 @@
     {
       "service": "meilisearch",
       "container": "/chat-meilisearch",
-      "state": "created",
+      "state": "running",
       "reference": "getmeili/meilisearch:v1.35.1@sha256:8b57fc3c7f46535ddef3828df1538465ac19d892eb57c9a10da6df0880bd5856",
       "image_id": "sha256:8b57fc3c7f46535ddef3828df1538465ac19d892eb57c9a10da6df0880bd5856",
       "repo_digests": [

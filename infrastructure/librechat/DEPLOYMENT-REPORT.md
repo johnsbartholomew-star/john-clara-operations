@@ -4,9 +4,9 @@ Date: 2026-09-14. PASS means observed evidence supports that narrow criterion. F
 
 ## Current state
 
-LibreChat v0.8.7 is cloned and configured. All four pinned images are pulled; four containers are Created, none Running at the recorded snapshot. No active host ports. Intended ports: 127.0.0.1:3080 and 127.0.0.1:3000. No account, conversations or working AI provider yet. OpenAI alone is selected but remains `user_provided`.
+LibreChat v0.8.7 is cloned and configured. All four pinned images are pulled. After the Mac was unlocked, Meilisearch is Running; MongoDB, app and admin remain Created. No active host ports. Intended ports: 127.0.0.1:3080 and 127.0.0.1:3000. No account, conversations or working AI provider yet. OpenAI alone is selected but remains `user_provided`.
 
-Docker Desktop starts through the user-local socket, but stack startup stalls at host-folder sharing. The UI tool independently reports the Mac locked. Unlock and inspect Desktop before proceeding; a permission prompt is suspected from host logs, not visually confirmed. Do not bypass OS/Desktop approvals.
+Docker Desktop responds through the user-local socket. After the user unlocked the Mac, direct UI inspection showed the Docker Subscription Service Agreement awaiting acceptance. User review/acceptance has been requested. Host-folder sharing was also pending in prior host logs; its remaining status is not yet proven. Do not bypass OS/Desktop approvals.
 
 ## Acceptance matrix
 
@@ -23,7 +23,7 @@ Docker Desktop starts through the user-local socket, but stack startup stalls at
 | Pinned non-RC source | PASS | v0.8.7 / 9e74cc0e57b395926122bd4062c1fcedc48ed465; newer observed tags are RCs. |
 | Upstream Compose unchanged | PASS | git diff --exit-code -- docker-compose.yml. |
 | Exact pulled images and digests | PASS | Four ARM64 images pulled and independently inspected through Docker API; see IMAGE-INVENTORY.json. None running at capture. |
-| Required containers healthy/running | FAIL | All four remain Created; startup stalled at host volume sharing approval/registration. Desktop UI cannot be inspected while Mac is locked. |
+| Required containers healthy/running | FAIL | Meilisearch Running; MongoDB/app/admin Created. Docker service agreement visibly awaits user acceptance; startup remains incomplete. |
 | LibreChat opens on localhost | FAIL | HTTP connection refused. |
 | Admin opens only on localhost | FAIL | HTTP connection refused. Resolved binding is localhost, but runtime UI untested. |
 | First account can be created | FAIL | Not tested: stack unavailable. |
@@ -62,7 +62,7 @@ MongoDB uses upstream internal-network noauth; it is not host-published. Other c
 
 ## Next actions and rollback
 
-1. Unlock Mac and inspect Docker Desktop's pending host-folder/startup prompts. Continue startup and verify all four services plus log review.
+1. Review/accept the visible Docker Desktop service agreement, then resolve any remaining startup/folder prompts. Continue startup and verify all four services plus log review.
 2. Bootstrap local administrator, close/verify registration, privately configure an existing provider API key, and execute every baseline test. Do not send secrets through chat.
 3. Only after baseline passes, provision scoped read-only GitHub Skill Sync credential and run its full update test; then create at most the two documented Agents.
 4. Back up and restore-test before declaring acceptance. Optional stateless code follows Phases 1–3; stateful remains evaluation-only.
