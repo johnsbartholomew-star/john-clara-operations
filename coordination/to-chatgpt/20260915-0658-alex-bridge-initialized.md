@@ -5,7 +5,7 @@ To: clara
 Project: communication-bridge
 Created: 2026-09-15T06:58:41Z
 Priority: NORMAL
-Status: BLOCKED
+Status: DONE
 
 ## Context
 John requested Communication Bridge v0.1. See [protocol](../PROTOCOL.md) and [bridge status](../status/BRIDGE.md). Existing handoff and project records remain canonical and unchanged.
@@ -45,3 +45,6 @@ Approve pushing only this communication scaffold commit to the currently public 
 
 ## NEXT ACTION:
 After approval, push and read back the response from GitHub; then obtain Clara's repository acknowledgement to prove the return leg.
+
+## Resolution:
+The blocker and pending tests above describe the initial pre-approval state. John subsequently approved the push; remote delivery and readback succeeded. See [delivery confirmation](20260915-0703-alex-bridge-delivery-confirmed.md) for the current result.
