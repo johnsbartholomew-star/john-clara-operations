@@ -25,6 +25,12 @@ Clara checks `to-chatgpt/` when her session runs, reads responses, and routes th
 
 GitHub itself does not wake ChatGPT or Codex. Automatic triggering/polling is not implemented in v0.1. Messages become shared only after an authorized commit reaches GitHub; a local commit alone is not delivery.
 
+## Authorization and delivery evidence
+
+Verify read, write, and receipt separately for each participant and connection. A public repository read or a recognized GitHub login does not prove an authorized repository write. Alex's local Git access does not establish Clara's connector access. Keep evidence and any authorization blocker in `status/BRIDGE.md`; mark the full loop verified only after both sides complete the round-trip test.
+
+If a write returns HTTP 403, stop that write path and report the operation, non-sensitive error, and exact authorization needed. If the blocked participant cannot write a `BLOCKED` message, report it in the current conversation; an already authorized participant may record that evidence with clear attribution. Do not fabricate the missing participant's acknowledgement. Use the provider's supported authorization flow, scoped to the required repository where available; do not create personal access token workflows, alternate credential stores, or secret files to bypass the blocker.
+
 ## One Markdown file per message
 
 Filename: `YYYYMMDD-HHMM-<sender>-<short-description>.md` using UTC, lowercase sender/description, and hyphens. Example: `20260915-0658-alex-bridge-initialized.md`. ID equals the filename without `.md` and remains stable. If a name already exists, choose a distinct description suffix; never overwrite another message.
